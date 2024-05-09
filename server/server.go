@@ -13,7 +13,6 @@ type ECFAPI struct {
 
 func NewHandler() http.Handler {
 	return saviyntecf.HandlerFromMux(NewECFAPI(), chi.NewRouter())
-
 }
 
 func NewECFAPI() saviyntecf.ServerInterface {

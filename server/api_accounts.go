@@ -38,7 +38,6 @@ func (a *ECFAPI) PostApiV1Accounts(w http.ResponseWriter, r *http.Request, param
 			w.WriteHeader(http.StatusInternalServerError)
 			return
 		}
-		// w.WriteHeader(http.StatusOK)
 	}
 }
 
