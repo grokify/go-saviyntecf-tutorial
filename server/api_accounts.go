@@ -18,8 +18,6 @@ type ECFAPI struct {
 // PostApiV1Accounts returns the list of accounts
 // (POST /api/v1/accounts)
 func (a *ECFAPI) PostApiV1Accounts(w http.ResponseWriter, r *http.Request, params saviyntecf.PostApiV1AccountsParams) {
-	// panic("not implemented") // TODO: Implement
-
 	body, resp, err := a.postApiV1AccountsProc(params)
 
 	if err != nil {
