@@ -23,7 +23,11 @@ func (a *ECFAPI) PostApiV1Accounts(w http.ResponseWriter, r *http.Request, param
 
 	if err != nil {
 		w.Header().Add(httputilmore.HeaderContentType, httputilmore.ContentTypeTextPlainUtf8)
-		w.Write([]byte(err.Error()))
+		_, err := w.Write([]byte(err.Error()))
+		if err != nil {
+			w.WriteHeader(http.StatusInternalServerError)
+			return
+		}
 		w.WriteHeader(http.StatusInternalServerError)
 		return
 	} else if resp != nil && resp.StatusCode > 299 {
