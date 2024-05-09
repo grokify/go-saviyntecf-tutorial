@@ -17,6 +17,10 @@ To run this service, use:
 % curl -XGET http://localhost:8080/api/v1/users
 ```
 
+## Further Reading
+
+1. [Go, Lambda and the API Gateway — the OpenAPI v3.0 story](https://levelup.gitconnected.com/go-lambda-and-the-api-gateway-the-openapi-v3-0-story-a8afe5f841df)
+
  [used-by-svg]: https://sourcegraph.com/github.com/grokify/go-saviyntecf-tutorial/-/badge.svg
  [used-by-url]: https://sourcegraph.com/github.com/grokify/go-saviyntecf-tutorial?badge
  [build-status-svg]: https://github.com/grokify/go-saviyntecf-tutorial/workflows/test/badge.svg
