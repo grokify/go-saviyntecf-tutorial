@@ -10,11 +10,6 @@ import (
 	"github.com/grokify/mogo/pointer"
 )
 
-type ECFAPI struct {
-	//service services.CareRequestService
-	saviyntecf.Unimplemented
-}
-
 // PostApiV1Accounts returns the list of accounts
 // (POST /api/v1/accounts)
 func (a *ECFAPI) PostApiV1Accounts(w http.ResponseWriter, r *http.Request, params saviyntecf.PostApiV1AccountsParams) {
