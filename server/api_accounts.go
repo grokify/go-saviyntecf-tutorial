@@ -3,6 +3,7 @@ package server
 import (
 	"encoding/json"
 	"net/http"
+	"strconv"
 
 	"github.com/grokify/go-saviyntecf"
 	"github.com/grokify/mogo/net/http/httputilmore"
@@ -51,7 +52,7 @@ func (a *ECFAPI) PostApiV1Accounts(w http.ResponseWriter, r *http.Request, param
 func (a *ECFAPI) postApiV1AccountsProc(params saviyntecf.PostApiV1AccountsParams) (saviyntecf.Accounts, *http.Response, error) {
 	return saviyntecf.Accounts{
 		Count:      pointer.Pointer(0),
-		Offset:     pointer.Pointer("0"),
+		Offset:     pointer.Pointer(strconv.Itoa(pointer.Dereference(params.Offset))),
 		TotalCount: pointer.Pointer(10),
 	}, nil, nil
 }
