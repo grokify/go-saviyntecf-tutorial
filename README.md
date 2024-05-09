@@ -13,8 +13,8 @@ To run this service, use:
 % git clone https://github.com/grokify/go-saviyntecf-tutorial
 % cd go-saviyntecf-tutorial
 % go run main.go
-% curl -XGET http://localhost:8080/api/v1/accounts
-% curl -XGET http://localhost:8080/api/v1/users
+% curl -XPOST http://localhost:8080/api/v1/accounts
+% curl -XPOST http://localhost:8080/api/v1/users --verbose
 ```
 
 ## Further Reading
