@@ -7,6 +7,10 @@ import (
 	saviyntecf "github.com/grokify/go-saviyntecf"
 )
 
+const (
+	AccountsImportCSVURL = "https://raw.githubusercontent.com/grokify/go-saviyntecf-tutorial/main/ECF_Account_Import.csv"
+)
+
 type ECFAPI struct {
 	saviyntecf.Unimplemented
 }

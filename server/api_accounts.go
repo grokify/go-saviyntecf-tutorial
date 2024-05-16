@@ -41,9 +41,14 @@ func (a *ECFAPI) PostAccounts(w http.ResponseWriter, r *http.Request, params sav
 }
 
 func (a *ECFAPI) postApiV1AccountsProc(params saviyntecf.PostAccountsParams) (saviyntecf.Accounts, *http.Response, error) {
-	return saviyntecf.Accounts{
+	accts := saviyntecf.Accounts{
 		Pagesize:   pointer.Pointer(pointer.Dereference(params.Pagesize)),
 		Offset:     pointer.Pointer(pointer.Dereference(params.Offset)),
 		TotalCount: pointer.Pointer(10),
-	}, nil, nil
+	}
+	resp, err := http.Get(AccountsImportCSVURL)
+	if err != nil {
+		return accts, resp, err
+	}
+	return accts, resp, nil
 }
