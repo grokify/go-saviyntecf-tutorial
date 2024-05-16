@@ -12,7 +12,7 @@ import (
 // PostApiV1Accounts returns the list of accounts
 // (POST /api/v1/accounts)
 func (a *ECFAPI) PostAccounts(w http.ResponseWriter, r *http.Request, params saviyntecf.PostAccountsParams) {
-	body, resp, err := a.postApiV1AccountsProc(params)
+	body, resp, err := a.postAccountsProc(params)
 
 	if err != nil {
 		w.Header().Add(httputilmore.HeaderContentType, httputilmore.ContentTypeTextPlainUtf8)
@@ -40,7 +40,7 @@ func (a *ECFAPI) PostAccounts(w http.ResponseWriter, r *http.Request, params sav
 	}
 }
 
-func (a *ECFAPI) postApiV1AccountsProc(params saviyntecf.PostAccountsParams) (saviyntecf.Accounts, *http.Response, error) {
+func (a *ECFAPI) postAccountsProc(params saviyntecf.PostAccountsParams) (saviyntecf.Accounts, *http.Response, error) {
 	accts := saviyntecf.Accounts{
 		Pagesize:   pointer.Pointer(pointer.Dereference(params.Pagesize)),
 		Offset:     pointer.Pointer(pointer.Dereference(params.Offset)),
