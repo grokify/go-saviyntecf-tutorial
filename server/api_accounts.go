@@ -3,7 +3,6 @@ package server
 import (
 	"encoding/json"
 	"net/http"
-	"strconv"
 
 	"github.com/grokify/go-saviyntecf"
 	"github.com/grokify/mogo/net/http/httputilmore"
@@ -12,7 +11,7 @@ import (
 
 // PostApiV1Accounts returns the list of accounts
 // (POST /api/v1/accounts)
-func (a *ECFAPI) PostApiV1Accounts(w http.ResponseWriter, r *http.Request, params saviyntecf.PostApiV1AccountsParams) {
+func (a *ECFAPI) PostAccounts(w http.ResponseWriter, r *http.Request, params saviyntecf.PostAccountsParams) {
 	body, resp, err := a.postApiV1AccountsProc(params)
 
 	if err != nil {
@@ -41,10 +40,10 @@ func (a *ECFAPI) PostApiV1Accounts(w http.ResponseWriter, r *http.Request, param
 	}
 }
 
-func (a *ECFAPI) postApiV1AccountsProc(params saviyntecf.PostApiV1AccountsParams) (saviyntecf.Accounts, *http.Response, error) {
+func (a *ECFAPI) postApiV1AccountsProc(params saviyntecf.PostAccountsParams) (saviyntecf.Accounts, *http.Response, error) {
 	return saviyntecf.Accounts{
-		Count:      pointer.Pointer(0),
-		Offset:     pointer.Pointer(strconv.Itoa(pointer.Dereference(params.Offset))),
+		Pagesize:   pointer.Pointer(pointer.Dereference(params.Pagesize)),
+		Offset:     pointer.Pointer(pointer.Dereference(params.Offset)),
 		TotalCount: pointer.Pointer(10),
 	}, nil, nil
 }
