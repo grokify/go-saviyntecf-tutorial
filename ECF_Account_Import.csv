@@ -1,0 +1,6 @@
+accountID,accountClass,accountType,customproperty1,displayname,name
+1001,null,Regular,TestValue1001,Dean Sharma, DSharma
+1002,null,Regular,TestValue1002,Vivek Kohli, VKohli
+1003,null,Service,TestValue1003,Arhjun Sharma,ASharma
+1004,null,Regular,TestValue1004,Joe Cook,JCook
+1005,null,Service,TestValue1005,Matthew Stokes,MStokes
