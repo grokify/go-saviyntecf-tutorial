@@ -5,7 +5,7 @@ go 1.22.2
 require (
 	github.com/go-chi/chi/v5 v5.0.12
 	github.com/grokify/go-saviyntecf v0.1.7
-	github.com/grokify/mogo v0.63.11
+	github.com/grokify/mogo v0.64.3
 )
 
 require (
@@ -25,7 +25,7 @@ require (
 	github.com/mohae/deepcopy v0.0.0-20170929034955-c48cc78d4826 // indirect
 	github.com/oapi-codegen/runtime v1.1.1 // indirect
 	github.com/perimeterx/marshmallow v1.1.5 // indirect
-	golang.org/x/exp v0.0.0-20240506185415-9bf2ced13842 // indirect
+	golang.org/x/exp v0.0.0-20240531132922-fd00a4e0eefc // indirect
 	golang.org/x/mod v0.17.0 // indirect
 	golang.org/x/text v0.15.0 // indirect
 	golang.org/x/tools v0.21.0 // indirect
