@@ -3,7 +3,7 @@ module github.com/grokify/go-saviyntecf-tutorial
 go 1.22.2
 
 require (
-	github.com/go-chi/chi/v5 v5.0.12
+	github.com/go-chi/chi/v5 v5.0.13
 	github.com/grokify/go-saviyntecf v0.1.7
 	github.com/grokify/mogo v0.63.11
 )
