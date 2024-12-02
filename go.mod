@@ -5,7 +5,7 @@ go 1.22.2
 require (
 	github.com/go-chi/chi/v5 v5.1.0
 	github.com/grokify/go-saviyntecf v0.1.9
-	github.com/grokify/mogo v0.65.3
+	github.com/grokify/mogo v0.66.0
 )
 
 require (
